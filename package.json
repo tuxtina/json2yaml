@@ -1,0 +1,56 @@
+{
+  "name": "json2yaml",
+  "displayName": "json2yaml",
+  "description": "Convert JSON to YAML, and YAML to JSON.",
+  "version": "0.1.0",
+  "publisher": "tuxtina",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tuxtina/json2yaml.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tuxtina/json2yaml/issues"
+  },
+  "homepage": "https://github.com/tuxtina/json2yaml",
+  "engines": {
+    "vscode": "^0.10.10"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "json",
+    "yaml",
+    "convert"
+  ],
+  "activationEvents": [
+    "onCommand:json2yaml.toYAML",
+    "onCommand:json2yaml.toJSON"
+  ],
+  "main": "./out/src/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "json2yaml.toYAML",
+        "title": "Convert JSON to YAML"
+      },
+      {
+        "command": "json2yaml.toJSON",
+        "title": "Convert YAML to JSON"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+    "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "devDependencies": {
+    "typescript": "^1.8.5",
+    "vscode": "^0.11.0"
+  },
+  "dependencies": {
+    "js-yaml": "^3.5.5"
+  }
+}
