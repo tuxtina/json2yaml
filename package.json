@@ -2,7 +2,7 @@
   "name": "json2yaml",
   "displayName": "json2yaml",
   "description": "Convert JSON to YAML, and YAML to JSON.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "tuxtina",
   "license": "SEE LICENSE IN LICENSE",
   "repository": {
