@@ -2,7 +2,7 @@
   "name": "json2yaml",
   "displayName": "json2yaml",
   "description": "Convert JSON to YAML, and YAML to JSON.",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "publisher": "tuxtina",
   "license": "SEE LICENSE IN LICENSE",
   "repository": {
@@ -48,6 +48,7 @@
   },
   "devDependencies": {
     "typescript": "^1.8.5",
+    "vsce": "^1.15.0",
     "vscode": "^0.11.0"
   },
   "dependencies": {

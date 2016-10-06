@@ -19,11 +19,20 @@ function convertSelection(conversionFn) {
       return;
     }
     editor.edit(edit => {
-      const selection = editor.selection;
-      const text = editor.document.getText(selection);
+      let textRange;
+      if (!editor.selection.isEmpty) {
+        textRange = new vscode.Range(editor.selection.start, editor.selection.end);
+      }
+      const text = editor.document.getText(textRange);
       const newText = conversionFn(text);
       if (newText) {
-        edit.replace(selection, newText);
+        if (!textRange) {
+          textRange = new vscode.Range(
+            editor.document.positionAt(0),
+            editor.document.positionAt(text.length)
+          );
+        }
+        edit.replace(textRange, newText);
       }
     });  
   }
